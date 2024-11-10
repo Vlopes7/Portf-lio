@@ -42,5 +42,45 @@ function removerDesfoque2() {
     image2.style.transition = "0.5s"
 }
 
+texto = document.querySelector("#opacidade")
+texto1 = document.querySelector("#texto1")
+texto2 = document.querySelector("#texto2")
+
+function instagram(){
+    texto.style.opacity = "1"
+    texto.style.scale = "1.1"
+    texto.style.transition = "0.5s"
+}
+
+function instagramremove(){
+    texto.style.opacity = "0"
+    texto.style.scale = "1"
+    texto.style.transition = "0.5s"
+}
+
+function github(){
+    texto1.style.opacity = "1"
+    texto1.style.scale = "1.1"
+    texto1.style.transition = "0.5s"
+}
+
+function githubremove(){
+    texto1.style.opacity = "0"
+    texto1.style.scale = "1"
+    texto1.style.transition = "0.5s"
+}
+
+function linkedin(){
+    texto2.style.opacity = "1"
+    texto2.style.scale = "1.1"
+    texto2.style.transition = "0.5s"
+}
+
+function linkedinremove(){
+    texto2.style.opacity = "0"
+    texto2.style.scale = "1"
+    texto2.style.transition = "0.5s"
+}
+
 
 

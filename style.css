@@ -12,7 +12,6 @@ body {
     background-color: rgb(197, 196, 196); 
     margin: 0; 
     padding: 0; 
-    margin-right: 100px;
 }
 
 .fotinha {
@@ -338,26 +337,79 @@ h5{
     height: 60%;
 } */
 
-.frontend{
-    background-color: white;
-    display: grid;
-    width: 400px;
-    border: solid red;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-
-}
-
 .frontend img{
     width: 10%;
-    grid: 2/4;
 }
 
+.backend img{
+    width: 10%;
+}
 
+.frontend {
+    color: white;
+    text-align: center;
+    margin-left: 10%;
+}
 
-h2{
+.backend{
+    margin-right: 10%;
+
+}
+
+.frontend, .backend{
+    margin-top: 3%;
+}
+ h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.backend h3{
     text-align: center;
 }
+
+table {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 13pt;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #444;
+}
+
+table tr:hover {
+    background-color: #555;
+}
+
+.hardskills{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box2{
+    background-color: #050505;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+}
+
+
+
+
 
  /* .frontend img, .backend img {
     width: 70%;
@@ -409,6 +461,35 @@ h1{
     text-align: center;
 }
 
+.contato{
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+    gap: 10%;
+    text-align: center;
+    scale: 1;
+}
+
+.contato p{
+    color: white;
+    opacity: 0;
+}
+
+.contato img{
+    cursor: pointer;
+    width: 200px;
+    background-color: white;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.contato img:hover{
+    filter: grayscale(0);
+    scale: 1.1;
+}
+
 
 @keyframes write {
     0% {
@@ -447,7 +528,8 @@ h1{
     }
 
     .fotinha {
-        width: 65%;
+        width: 100%;
+        padding: 30px 0;
     }
 
     .fotinha2 {
@@ -458,16 +540,150 @@ h1{
     .grid-container {
         display: flex;
         flex-direction: column;
+        gap: 40px;
         align-items: center;
     }
 
-    .item1 {
+    .conteudo {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn1, .btn2 {
+        font-size: 14pt;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
         text-align: center;
-        padding-right: 0;
+    }
+
+    .scroll-topo {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .box {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .box h3 {
+        font-size: 18px;
+    }
+
+    .fotinha2 {
+        width: 80%;
+        height: auto;
+    }
+
+    .contato {
+        gap: 5%;
+    }
+
+    .contato img {
+        width: 150px; /* Diminui o tamanho dos ícones em telas menores */
+    }
+
+    table {
+        width: 90%; /* Reduz a largura da tabela para caber melhor em telas menores */
+        max-width: 100%; /* Permite que a tabela ocupe toda a largura da tela, se necessário */
+        overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+        display: block;
+        white-space: nowrap; /* Garante que os dados não quebrem em várias linhas */
+    }
+
+    table th, table td {
+        font-size: 11pt; /* Diminui o tamanho da fonte para melhorar a legibilidade em telas pequenas */
+        padding: 8px; /* Ajusta o padding para otimizar o espaço */
+    }
+
+    /* Adiciona rolagem horizontal */
+    table {
+        -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+    }
+
+    #projetos .container {
+        padding: 10px;
+    }
+
+    #projetos .item {
+        max-width: 100%; /* Garante que os itens ocupem toda a largura da tela em dispositivos pequenos */
+    }
+}
+
+@media (max-width: 480px) {
+    .fotinha {
+        padding: 20px 0;
     }
 
     .conteudo {
-        margin-right: 0;
-    }    
+        font-size: 14px;
+    }
+
+    .grid-container {
+        padding: 0 20px;
+    }
+
+    .fotinha2 {
+        width: 70%;
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+
+    .btn1, .btn2 {
+        font-size: 12pt;
+        padding: 12px;
+    }
+
+    .scroll-topo {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .contato img {
+        width: 150px;
+    }
+
+    .contato {
+        gap: 20px; /* Aumenta o espaçamento entre os ícones em telas muito pequenas */
+    }
+
+    .contato img {
+        width: 120px; /* Reduz ainda mais o tamanho dos ícones em telas pequenas */
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%; /* Garante que a tabela ocupe 100% da largura */
+    }
+
+    table th, table td {
+        font-size: 10pt; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+        padding: 6px; /* Ajusta o padding para não sobrecarregar o espaço */
+    }
+
+    #projetos .container {
+        padding: 0;
+    }
+
+    #projetos .item {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    #projetos .item img {
+        border-radius: 8px;
+    }
+
 }
 
