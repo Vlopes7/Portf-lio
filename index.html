@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <nav>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul id="navbar">
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#projetos">Meus projetos</a></li>
+                    <li><a href="#conhecimentos">Hard Skills</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img src="Imagens/foto sem fundo.png" class="fotinha">
+
+    <main>
+        <h1 style="text-align: center; color: black;">Olá, meu nome é Vinícius...</h1>
+        <div class="container">
+            <div class="msg">Desenvolvedor Full Stack...</div>
+        </div>
+        <br><br>
+
+        <div class="botoes">
+            <button class="btn1"><a href="https://www.linkedin.com/in/vin%C3%ADcius-lopes-1bb568326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></button>
+            <button class="btn2"><a href="https://github.com/Vlopes7" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></button>
+        </div>
+
+        <div class="grid-container" id="sobre">
+            <div class="fotinha2">
+                <img src="Imagens/foto2.png" alt="Imagem de perfil">
+            </div>
+            
+            <div class="content">
+                <h1 class="titulo">&lt;Sobre mim/&gt;</h1>
+                <p class="conteudo">
+                    Me chamo Vinícius Lopes, atualmente estou cursando Análise e Desenvolvimento de Sistemas na FATEC, na unidade de São José dos Campos.
+                </p>
+                <p class="conteudo">
+                    Em 2020, realizei meu técnico em eletrônica na UNIVAP juntamente com o ensino médio, e lá eu tive meu primeiro contato com a programação.
+                </p>
+                <p class="conteudo">
+                    Escolhi Full Stack devido à sua grande comunidade e potencial de crescimento.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="box" id="projetos">
+        <h1 style="text-align: center; font-family: 'Faculty Glyphic';"><strong>&lt;Projetos/&gt;</strong></h1>
+        <hr class="linha">
+        <p style="text-align: center;">Projetos são meios importante para provas suas habilidades como DEV <br> Visite meu GitHub e confira meus repositórios</p>
+
+                <div class="abas">
+                    <div class="tcc">
+                        <img src="Imagens/TCC.png" class="fotinha3">
+                        <h5 class="text-overlay" onmouseover="aplicarDesfoque()" onmouseleave="removerDesfoque()">Chuveiro Inteligente <p>Sistema de chuveiro inteligente e sustentável que tem o objetivo de permitir a economia de água em residências que possuem chuveiro a gás.</p></h5>
+                    </div>
+                    <div class="easyscrum">
+                        <img src="Imagens/LogoEasyScrum copiar.png" class="fotinha4">
+                        <h5 class="text-overlay2" onmouseover="aplicarDesfoque2()" onmouseleave="removerDesfoque2()">Easy Scrum <p>O Easy Scrum, site desenvolvido pela equipe ECHO, é um site em que o usuário pode aprender sobre a metodologica SCRUM, com cards, áudios, imagens e, no final, um teste de conhecimento a fim de verificar o quão o usuário aprendeu com a metodologia.</p></h5>
+                    </div>
+                    <div class="titulo">
+                        <h3 class="t1">Projeto chuveiro inteligente - UNIVAP 2022</h3>
+                        <h3 class="t2">Projeto Easy Scrum - FATEC 2024</h3>
+                    </div>
+                </div>
+    </section>
+
+    <section class="box1" id="conhecimentos">
+        <h1 style="color: white; font-family: 'Faculty Glyphic';"><strong>&lt;Hard Skills/&gt;</strong></h1>
+
+    </section>
+
+    <button id="btntop" class="scroll-topo">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
