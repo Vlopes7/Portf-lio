@@ -183,7 +183,7 @@ main {
     margin-top: 10%;
     margin-bottom: 10%;
     height: 90vh;
-    gap: 20px;
+    gap: 90px;
     width: 80%; 
     margin-left: auto;
     margin-right: auto;
@@ -523,6 +523,10 @@ h1{
 
     .botoes{
         margin-bottom: 35%;
+    }
+
+    .flex{
+        gap: 0;
     }
 }
 
