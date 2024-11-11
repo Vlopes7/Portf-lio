@@ -529,6 +529,11 @@ h1{
         gap: 0;
     }
 
+    main{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 }
 
 @media screen and (max-width:700px){
