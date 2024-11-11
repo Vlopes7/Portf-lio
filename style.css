@@ -529,9 +529,8 @@ h1{
         gap: 0;
     }
 
-    main{
-        margin-left: 10px;
-        margin-right: 10px;
+    #md{
+        font-size: 15pt;
     }
 
 }
