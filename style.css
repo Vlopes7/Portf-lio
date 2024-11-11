@@ -31,6 +31,8 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 0 10%;
+    position: relative; 
+    z-index: 10; 
 }
 
 nav ul {
@@ -86,15 +88,31 @@ ul li {
 }
 
 .menu-toggle {
+    z-index: 2;
     display: none;
     font-size: 24px;
     cursor: pointer;
+}
+
+#navbar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(197, 196, 196) ;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
 }
 
 .botoes{
     display: flex;
     justify-content: center;  
     gap: 100px;
+    z-index: 10;
+    position: relative; 
+    z-index: 10; 
 }
 
 .btn1 a, .btn2 a{
@@ -159,11 +177,11 @@ main {
     justify-self: center; 
 }
 
-.grid-container {
-    display: grid;
+.flex {
+    display: flex;
+    flex-direction: row;
     margin-top: 10%;
     margin-bottom: 10%;
-    grid-template-columns: 1fr 2fr; 
     height: 90vh;
     gap: 90px; 
     width: 80%; 
@@ -173,6 +191,8 @@ main {
 }
 
 .conteudo {
+    display: flex;
+    flex-direction: column;
     line-height: 1.8;
     font-size: 16px;
     max-width: 500px;
@@ -214,7 +234,7 @@ main {
     background-image: linear-gradient(to bottom,rgb(197, 196, 196), black );
     color: white;
     padding: 20px;
-    padding-top: 7%;
+    padding-top: 3%;
     margin: 0;
     height: 100vh;
 }
@@ -236,97 +256,77 @@ main {
     border: solid yellow;
 }
 
-.tcc, .easyscrum{
-    display: inline;
-    margin-inline-start: 15%;
-}
-
-.tcc{
-    position: relative;
-    width: 600px; 
-    height: 400px; 
-}
-
-.text-overlay{
-    position: absolute;
-    width: 357px;
-    height: 260px;
-    left: 5px;
-    bottom: -19px;
-    color: white; 
-    font-size: 20px; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px 20px; 
-    opacity: 0;
-    scale: 1;
-    transition: 0.5s;
-}
-
-.text-overlay:hover{
-    opacity: 1;
-    scale: 1.050;
-    transition: 0.5s;
-}
-
-.text-overlay2{
-    position: absolute;
-    width: 301px;
-    height: 255px;
-    left: 59.9%;
-    bottom: -195.1vh;
-    color: white; 
-    font-size: 20px; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px 20px; 
-    opacity: 0;
-    scale: 1;
-    transition: 0.5s;
-}
-
-.text-overlay, .text-overlay2{
-    cursor: pointer;
-    font-size: 12pt;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    align-content: center;
-}
-
-.text-overlay2:hover{
-    opacity: 1;
-    scale: 1.050;
-    transition: 0.5s;
-}
-
 .fotinha3, .fotinha4{
     margin-top: 50px;
 }
 
-h5{
+.tcc {
+    z-index: -2;
+    display: flex; 
+    justify-content: center;
+    gap: 10%;
+    margin-top: 10%;
+}
+
+.image-container {
+    width: 400px;
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s; 
+}
+
+.image-container:nth-child(1) {
+    background-image: url('Imagens/TCC.png'); 
+    border: solid yellow;
+}
+
+.image-container:nth-child(2) {
+    background-image: url('Imagens/LogoEasyScrum\ copiar.png'); 
+    border: solid yellow;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    transition: 0.3s; 
+    color: #fff;
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.titulo {
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-container:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 8px 8px yellow,0px 0px 8px 2px yellow ;
+}
+
+.titulos{
     display: flex;
-    align-items: center;
-    justify-content: space-between;           
+    justify-content: flex-start;
+    gap: 16%;
+    margin-left: 16%;
+    font-family: Arial, Helvetica, sans-serif
 }
 
-.t1{
-    padding-left: 16%;
-}
-
-.t2{
-    padding-right: 17%;
-}
 
 .box1 {
     background-color: #050505;
     padding: 20px;
     margin: 0;
     height: 100vh;
-}
-
-.abas{
-    margin-top: 5%;
 }
 
 /* .secao {
@@ -348,12 +348,6 @@ h5{
 .frontend {
     color: white;
     text-align: center;
-    margin-left: 10%;
-}
-
-.backend{
-    margin-right: 10%;
-
 }
 
 .frontend, .backend{
@@ -397,7 +391,9 @@ table tr:hover {
 
 .hardskills{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .box2{
@@ -506,184 +502,135 @@ h1{
     }
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
+@media screen and (max-width: 1125px) {
+    .hardskills {
+        width: 100%;
+        max-width: 800px;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul li {
-        width: 100%;
-        padding: 15px 0;
-    }
-
-    .fotinha {
-        width: 100%;
-        padding: 30px 0;
-    }
-
-    .fotinha2 {
-        max-width: 80%;
-        margin: 20px auto;
-    }
-
-    .grid-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+        justify-content: center;
         align-items: center;
+        display: flex; 
+        text-align: center; 
     }
 
-    .conteudo {
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    .botoes {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .btn1, .btn2 {
-        font-size: 14pt;
+    table {
         width: 100%;
-        padding: 15px;
-        border-radius: 10px;
+        max-width: 600px; 
+        margin: auto auto auto auto;
+    }
+
+    .frontend, .backend {
+        display: flex;
+        justify-content: center; 
+        width: 100%;
         text-align: center;
+        flex-direction: column; 
     }
 
-    .scroll-topo {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .box {
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .box h3 {
-        font-size: 18px;
-    }
-
-    .fotinha2 {
-        width: 80%;
-        height: auto;
+    #contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: center; 
+        text-align: center; 
+        padding: 20px;
     }
 
     .contato {
-        gap: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10%;
+        text-align: center;
+    }
+
+    .contato p {
+        color: white;
+        opacity: 1; 
     }
 
     .contato img {
-        width: 150px; /* Diminui o tamanho dos ícones em telas menores */
+        cursor: pointer;
+        width: 200px;
+        background-color: white;
+        border-radius: 50%;
+        filter: grayscale(1);
+        transition: 0.3s;
     }
 
-    table {
-        width: 90%; /* Reduz a largura da tabela para caber melhor em telas menores */
-        max-width: 100%; /* Permite que a tabela ocupe toda a largura da tela, se necessário */
-        overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
-        display: block;
-        white-space: nowrap; /* Garante que os dados não quebrem em várias linhas */
+    .contato img:hover {
+        filter: grayscale(0);
+        scale: 1.1;
     }
 
-    table th, table td {
-        font-size: 11pt; /* Diminui o tamanho da fonte para melhorar a legibilidade em telas pequenas */
-        padding: 8px; /* Ajusta o padding para otimizar o espaço */
-    }
-
-    /* Adiciona rolagem horizontal */
-    table {
-        -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
-    }
-
-    #projetos .container {
-        padding: 10px;
-    }
-
-    #projetos .item {
-        max-width: 100%; /* Garante que os itens ocupem toda a largura da tela em dispositivos pequenos */
-    }
 }
 
-@media (max-width: 480px) {
-    .fotinha {
-        padding: 20px 0;
+@media (max-width: 1020px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
     }
-
-    .conteudo {
-        font-size: 14px;
-    }
-
-    .grid-container {
-        padding: 0 20px;
+    
+    .content {
+        order: 2; 
     }
 
     .fotinha2 {
-        width: 70%;
+        order: 1; 
+    }
+    
+    .fotinha2 img {
+        width: 100%; 
+        max-width: 300px; 
+    }
+    
+    .content h1, .content p {
+        text-align: center; 
+        padding: 10px; 
     }
 
-    .botoes {
-        gap: 10px;
+    .box{
+        margin-top: 30%;
     }
 
-    .btn1, .btn2 {
-        font-size: 12pt;
-        padding: 12px;
+}
+
+@media(max-width:850px){
+    #navbar {
+        display: none;
     }
 
-    .scroll-topo {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+    .menu-toggle{
+        display: block;
     }
 
-    .contato img {
-        width: 150px;
+    #navbar.active {
+        display: flex;
     }
-
-    .contato {
-        gap: 20px; /* Aumenta o espaçamento entre os ícones em telas muito pequenas */
-    }
-
-    .contato img {
-        width: 120px; /* Reduz ainda mais o tamanho dos ícones em telas pequenas */
-    }
-
-    table {
-        width: 100%;
-        max-width: 100%; /* Garante que a tabela ocupe 100% da largura */
-    }
-
-    table th, table td {
-        font-size: 10pt; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
-        padding: 6px; /* Ajusta o padding para não sobrecarregar o espaço */
-    }
-
-    #projetos .container {
+    
+    nav ul {
+        display: block; 
         padding: 0;
     }
 
-    #projetos .item {
-        padding: 15px;
-        max-width: 100%;
+    nav ul li {
+        padding: 20px;
+        text-align: center;
     }
 
-    #projetos .item img {
-        border-radius: 8px;
+    nav ul li a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
     }
 
+    nav ul li a:hover {
+        color: #cf0e4f; 
+    }
+
+    
 }
+
+
 
