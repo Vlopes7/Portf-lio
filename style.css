@@ -520,6 +520,10 @@ h1{
     .chuveiro-inteligente, .easy-scrum{
         width: 300px;
     }
+
+    .botoes{
+        margin-bottom: 35%;
+    }
 }
 
 @media screen and (max-width:700px){
